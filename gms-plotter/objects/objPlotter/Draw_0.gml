@@ -20,6 +20,19 @@ draw_set_alpha(0.6);
 
 draw_rectangle(mx1, my1, mx2, my2, true);
 
+draw_set_alpha(0.1);
+
+draw_rectangle(mx1, my1, mx2, my2, false);
+
+draw_set_alpha(1);
+draw_set_colour(c_white);
+
+if !selection_coords
+	exit;
+	
+draw_set_alpha(0.6);
+draw_set_colour(c_black);
+
 if logical_my1 > logical_my2 {	
 	plot_text(logical_mx1, logical_my1 - logical_font_size, "(" + string(logical_mx1) + "," + string(logical_my1) + ")");
 	plot_text(logical_mx2, logical_my2 + logical_font_size, "(" + string(logical_mx2) + "," + string(logical_my2) + ")");
@@ -27,10 +40,6 @@ if logical_my1 > logical_my2 {
 	plot_text(logical_mx1, logical_my1 + logical_font_size, "(" + string(logical_mx1) + "," + string(logical_my1) + ")");
 	plot_text(logical_mx2, logical_my2 - logical_font_size, "(" + string(logical_mx2) + "," + string(logical_my2) + ")");
 }
-
-draw_set_alpha(0.1);
-
-draw_rectangle(mx1, my1, mx2, my2, false);
 
 draw_set_alpha(1);
 draw_set_colour(c_white);

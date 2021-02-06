@@ -7,6 +7,7 @@ mx2 = 0;
 my2 = 0;
 
 draw = false;
+selection_coords = true;
 
 logical_coords1 = { _x: 0, _y: 0 };
 logical_coords2 = { _x: 0, _y: 0 };

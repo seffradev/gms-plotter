@@ -1,4 +1,7 @@
 /// @description Draw mouse-coordinates
+if !instance_exists(objGrid) || !objGrid.mouse_coords
+	exit;
+	
 var mouse_coords = reverse_map2d(mouse_x, mouse_y);
 var font_size = font_get_size(draw_get_font());
 

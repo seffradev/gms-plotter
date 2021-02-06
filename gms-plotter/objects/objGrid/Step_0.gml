@@ -34,3 +34,18 @@ if keyboard_check_pressed(ord("P"))
 
 if keyboard_check_pressed(ord("B"))
 	bounding_box = !bounding_box;
+
+if keyboard_check_pressed(ord("X"))
+	x_axis = !x_axis;
+
+if keyboard_check_pressed(ord("Y"))
+	y_axis = !y_axis;
+
+if keyboard_check_pressed(ord("Q"))
+	axis_labels = !axis_labels;
+
+if keyboard_check_pressed(ord("M"))
+	mouse_coords = !mouse_coords;
+
+if keyboard_check_pressed(ord("G"))
+	plots = !plots;

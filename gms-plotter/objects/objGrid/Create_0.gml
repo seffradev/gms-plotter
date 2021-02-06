@@ -15,12 +15,17 @@ new_grid_yscale = 1;
 // Pixel scaling for the grid
 pixel_scale = 64;
 
-// If this is true, the grid will be split into subsections
+// These control what is currently rendered. 
 division_grids = true;
+axis_labels = true;
 labels = true;
 axes = true;
 polar = false;
 bounding_box = false;
+x_axis = true;
+y_axis = true;
+mouse_coords = true;
+plots = true;
 
 // The scaling of the sub-grids
 subgrid_xscale = 1;
