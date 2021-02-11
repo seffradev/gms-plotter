@@ -46,6 +46,20 @@ function plot_line2d_width(x1, y1, x2, y2, line_width) {
 	draw_line_width(map1._x, map1._y, map2._x, map2._y, line_width);
 }
 
+function plot_vector2d(vector) {
+	var map1 = map2d(vector._x1, vector._y1);
+	var map2 = map2d(vector._x2, vector._y2);
+	
+	draw_arrow(map1._x, map1._y, map2._x, map2._y, 10);
+}
+
+function plot_vector2d_width(vector, width) {
+	var map1 = map2d(vector._x1, vector._y1);
+	var map2 = map2d(vector._x2, vector._y2);
+	
+	draw_arrow(map1._x, map1._y, map2._x, map2._y, width);
+}
+
 /// @function					plot2d(x, f);
 /// @param {array} x			list of x-values to plot at
 /// @param {function} f			the function to plot
