@@ -120,3 +120,38 @@ if x_axis {
 
 draw_set_colour(c_white);
 draw_set_alpha(1);
+
+if !plots
+	exit;
+
+draw_set_colour(c_black);
+
+/*
+plot_point2d(1, 1);
+plot_circle(-5, 2, 3);
+plot_line2d(2, -3, 5, 4);
+plot_line2d_width(-16, 5, 32, -4, 5);
+*/
+
+/*
+arr = linspace(-5, 5, 100);
+draw_set_colour(c_red);
+plot2d_width(arr, sin, 2);
+plot_text(pi/2 + 1, 1, "f(x)=sinx");
+draw_set_colour(c_blue);
+plot2d_width(arr, cos, 2);
+plot_text(0, 1.3, "f(x)=cosx");
+draw_set_colour(c_black);
+plot2d_width(arr, quadratic, 2);
+plot_text(-1, 4, "f(x)=x^2");
+*/
+vec = vector2d(3, 4);
+vec2 = vector2d_from_coords(-2, 1, 3, 5);
+vec3 = vector2d_from_angle(5, 11*pi/6);
+
+plot_vector2d(vec);
+plot_vector2d_width(vec2, 10);
+plot_vector2d_width(vec3, 15);
+
+draw_set_colour(c_white);
+
