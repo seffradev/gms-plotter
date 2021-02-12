@@ -1,10 +1,15 @@
-function quadratic(x, a, b, c) {
-	if a == undefined
-		a = 1;
-	if b == undefined
-		b = 0;
-	if c == undefined
-		c = 0;
+function test(x) {
+	return x * x + 3 * x + 2;
+}
+
+function derivative(x, f) {
+	var h = 0.001;
+	return (f(x + h) - f(x - h)) / (2 * h);
+}
+
+function tangent(x) {
+	var f = sin;
+	var point = 2;
 	
-	return a * x * x + b * x + c;
+	return (x - point) * derivative(point, f) + f(point);
 }

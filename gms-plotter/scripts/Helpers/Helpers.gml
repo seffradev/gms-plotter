@@ -7,8 +7,8 @@ function map2d(x, y) {
 	if !instance_exists(objGrid)
 		exit;
 	
-	gridX = objGrid.gridline_horizontal + x * objGrid.grid_xscale * objGrid.pixel_scale;
-	gridY = objGrid.gridline_vertical - y * objGrid.grid_yscale * objGrid.pixel_scale;
+	gridX = objGrid.gridline_horizontal + x * objGrid.pixel_scale;
+	gridY = objGrid.gridline_vertical - y * objGrid.pixel_scale;
 	
 	return { _x: gridX, _y: gridY };
 }
@@ -17,8 +17,8 @@ function reverse_map2d(x, y) {
 	if !instance_exists(objGrid)
 		exit;
 	
-	gridX = (x - objGrid.gridline_horizontal) / (objGrid.grid_xscale * objGrid.pixel_scale);
-	gridY = -(y - objGrid.gridline_vertical) / (objGrid.grid_yscale * objGrid.pixel_scale);
+	gridX = (x - objGrid.gridline_horizontal) / objGrid.pixel_scale;
+	gridY = -(y - objGrid.gridline_vertical) / objGrid.pixel_scale;
 	
 	return { _x: gridX, _y: gridY };
 }
@@ -32,8 +32,8 @@ function scale2d(x, y) {
 	if !instance_exists(objGrid)
 		exit;
 	
-	gridX =   x * objGrid.grid_xscale * objGrid.pixel_scale;
-	gridY = - y * objGrid.grid_yscale * objGrid.pixel_scale;
+	gridX =   x / objGrid.grid_xscale * objGrid.pixel_scale;
+	gridY = - y / objGrid.grid_yscale * objGrid.pixel_scale;
 	
 	return { _x: gridX, _y: gridY };
 }
@@ -42,8 +42,8 @@ function reverse_scale2d(x, y) {
 	if !instance_exists(objGrid)
 		exit;
 	
-	gridX =   x / (objGrid.grid_xscale * objGrid.pixel_scale);
-	gridY = - y / (objGrid.grid_yscale * objGrid.pixel_scale);
+	gridX =   x * objGrid.grid_xscale / objGrid.pixel_scale;
+	gridY = - y * objGrid.grid_yscale / objGrid.pixel_scale;
 	
 	return { _x: gridX, _y: gridY };
 }

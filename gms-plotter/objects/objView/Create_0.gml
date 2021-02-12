@@ -1,6 +1,6 @@
 /// @description 
 // Resolution
-#macro RES_W 1366
+#macro RES_W 768
 #macro RES_H 768
 #macro RES_SCALE 1
 
